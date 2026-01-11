@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <section class="col-12 col-lg-5 oz-login-col">
+
+    <h1 class="oz-title">Sign In</h1>
+
+    <form method="post" class="oz-form">
+
+      <div class="mb-3">
+        <label class="form-label oz-label" for="login-email">Email Address</label>
+        <!-- ✅ FIX: name MUST be "email" -->
+        <input id="login-email" type="email" name="email" class="form-control oz-input" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label oz-label" for="login-password">Password</label>
+        <input id="login-password" type="password" name="password" class="form-control oz-input" required>
+      </div>
+
+      <div class="text-end">
+        <a class="oz-link small ext-link" href="#" onclick="return false;">Forgot your password?</a>
+      </div>
+
+      <p class="oz-terms fw-bold">
+        By clicking "Sign In", I confirm that I have read and agree to the terms of the
+        <strong>McGraw Hill</strong>
+        <a class="oz-link ext-link" href="#" onclick="return false;">Terms of Use</a>, the
+        <a class="oz-link ext-link" href="#" onclick="return false;">Video Viewing Notice</a>, the
+        <a class="oz-link ext-link" href="#" onclick="return false;">Consumer Purchase Terms</a>
+        if applicable, and
+        <a class="oz-link ext-link" href="#" onclick="return false;">Privacy Notice</a>.
+      </p>
+
+      <div class="mb-3 oz-btn-wrap">
+        <button type="submit" class="btn btn-primary oz-btn">Sign In</button>
+      </div>
+
+    </form>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,295 @@
+/* ===============================
+   PROXIMA NOVA (TTF)
+================================ */
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===============================
+   VARIABLES
+================================ */
+:root {
+  --oz-primary: #e21a23;
+  --oz-link: #01708c;
+  --oz-border: #9a9a9a;
+
+  /* Match reference footer tones */
+  --oz-dark: #3f433e;
+  --oz-darker: #000000;
+}
+
+/* ===============================
+   GLOBAL WRAP (tight toward center)
+================================ */
+.oz-wrap{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===============================
+   BASE LAYOUT
+================================ */
+.oz-body {
+  margin: 0;
+  font-family: "ProximaNova", "Helvetica Neue", Arial, sans-serif;
+  color: #000;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.oz-header {
+  padding-top: 18px;
+}
+
+.oz-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Logo link */
+.oz-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* IMPORTANT: size the IMG itself (not a div) */
+.oz-logo-img{
+  display: block;
+}
+
+/* Desktop logo footprint */
+.oz-logo--lg {
+  width: 160px !important;
+  height: 40px !important;
+}
+
+/* Mobile logo footprint */
+.oz-logo--sm {
+  width: 60px !important;
+  height: 40px !important;
+}
+
+.oz-help {
+  margin-top: 2px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+.oz-help:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   MAIN CONTENT SPACING
+================================ */
+.oz-main {
+  padding-top: 70px;
+  padding-bottom: 120px;
+  flex: 1;
+}
+
+/* ===============================
+   LOGIN FORM
+================================ */
+.oz-login-col {
+  text-align: left;
+  max-width: 520px; /* tighter like original */
+}
+
+.oz-title {
+  text-align: left;
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  margin-bottom: 42px;
+}
+
+.oz-label {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+.oz-input {
+  height: 52px;
+  background: #ffffff;
+  border: 1px solid var(--oz-border);
+  border-radius: 0 !important;
+  padding: 0 16px;
+  box-shadow: none !important;
+}
+.oz-input:focus {
+  outline: none;
+  border-color: var(--oz-border);
+  box-shadow: none !important;
+}
+
+/* Links */
+.oz-link {
+  color: var(--oz-link);
+  text-decoration: none;
+}
+.oz-link:hover {
+  text-decoration: underline;
+}
+
+/* Terms paragraph */
+.oz-terms {
+  margin-top: 34px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ===============================
+   SIGN IN BUTTON
+================================ */
+.btn,
+.oz-btn {
+  border-radius: 0 !important;
+}
+
+.oz-btn {
+  width: 100%;
+  height: 64px;
+  background: var(--oz-primary) !important;
+  border-color: var(--oz-primary) !important;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.oz-btn-wrap {
+  margin-top: 18px;
+  text-align: left;
+}
+
+/* ===============================
+   EXTERNAL LINK ICON (box + arrow)
+================================ */
+.ext-link {
+  position: relative;
+  padding-right: 20px;
+}
+
+/* Icon uses currentColor so it becomes white in footer */
+.ext-link::after {
+  content: "";
+  position: absolute;
+  top: 4px;      /* baseline align (matches reference better) */
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: currentColor;
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  -webkit-mask-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'>\
+<path d='M10 3h3v3h-1V4.7L6.85 9.85l-.7-.7L11.3 4H10z'/>\
+<path d='M13 13H3V3h5V2H2v12h12V8h-1z'/>\
+</svg>");
+
+  mask-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'>\
+<path d='M10 3h3v3h-1V4.7L6.85 9.85l-.7-.7L11.3 4H10z'/>\
+<path d='M13 13H3V3h5V2H2v12h12V8h-1z'/>\
+</svg>");
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.oz-footer-bar {
+  background: var(--oz-dark);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.oz-footer-links {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.oz-footlink {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 8px;
+}
+.oz-footlink:hover {
+  text-decoration: underline;
+}
+
+.oz-sep {
+  color: #fff;
+  opacity: 0.9;
+  padding: 0 10px;
+}
+
+.oz-footer-copy {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.95;
+  line-height: 1.25;
+}
+
+/* Cookie bar */
+.oz-cookie-bar {
+  background: var(--oz-darker);
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Make links white in footer/cookie */
+.ext-link-white {
+  color: #ffffff !important;
+}
+
+/* Cookie link: slightly heavier, NO underline */
+.oz-cookie-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.oz-cookie-link:hover {
+  text-decoration: none;
+}
